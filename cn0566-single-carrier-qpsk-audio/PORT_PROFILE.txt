@@ -1,0 +1,4 @@
+Pluto TX2A         -> CN0566 TX_IN
+CN0566 TX_OUT_2    -> external Vivaldi transmit antenna
+CN0566 RX1         -> Pluto RX1A
+CN0566 RX2         -> Pluto RX2A

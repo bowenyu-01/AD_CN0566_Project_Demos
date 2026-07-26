@@ -1,0 +1,4 @@
+CN0566 / Pluto single-carrier QPSK audio link
+Version: 1.3.0-github-release
+Protocol and realtime profile: compatible with 1.2.0-realtime-audio
+Default receive path: RX2A; optional RX1A+RX2A MRC

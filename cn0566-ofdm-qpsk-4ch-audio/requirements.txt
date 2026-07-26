@@ -1,0 +1,5 @@
+numpy>=1.19,<2.0
+scipy>=1.6,<1.14
+matplotlib>=3.3,<3.9
+pyadi-iio>=0.0.21
+pylibiio>=0.25

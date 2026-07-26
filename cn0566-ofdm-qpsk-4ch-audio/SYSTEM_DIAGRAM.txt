@@ -1,0 +1,18 @@
+Four-channel OFDM system
+========================
+
+ sample_1.wav -> ADPCM packet -> logical channel 1, 48 interleaved carriers --\
+ sample_2.wav -> ADPCM packet -> logical channel 2, 48 interleaved carriers ----\
+ sample_3.wav -> ADPCM packet -> logical channel 3, 48 interleaved carriers -----+--> 256-IFFT + 32 CP
+ sample_4.wav -> ADPCM packet -> logical channel 4, 48 interleaved carriers ----/           |
+                                                                                         2 MSPS I/Q
+                                                                                             |
+ Raspberry Pi 4 -> pyadi-iio/libiio -> Pluto TX2A -> CN0566 TX_IN -> TX_OUT_2 -> Vivaldi
+                                                                                             |
+                                                                                RF path / reflector
+                                                                                             |
+                         speaker <- selectable mixer <- 4 jitter buffers <- packet/FEC <- OFDM FFT
+                                                                                             ^
+ Raspberry Pi 4 <- pyadi-iio/libiio <- Pluto RX2A <- CN0566 RX2 <- phased receive array -------------
+
+Optional MRC also streams CN0566 RX1 -> Pluto RX1A, but it is not the default at 2 MSPS.

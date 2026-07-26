@@ -1,0 +1,24 @@
+CN0566 / Pluto Single-Carrier QPSK Performance Report
+=============================================================
+Mode: simulate
+Frames analyzed: 10
+Mean correlation: 0.6374
+Mean residual CFO: +7.349 Hz
+Mean EVM: -7.635 dB
+Mean pre-FEC BER: 1.633663e-02
+Mean pre-FEC SER: 3.267327e-02
+
+Profile
+-------
+Sample rate: 1000000 sample/s
+Symbol rate: 250000 symbol/s
+Samples/symbol: 4
+Digital offset: 187500 Hz
+RF bandwidth: 1000000 Hz
+Pluto IF LO: 2200000000 Hz
+Nominal X-band center: 10199812500 Hz
+
+Notes
+-----
+The eye diagram is reconstructed from equalized QPSK decisions for visualization.
+Hardware transmission must be conducted only in an authorized or shielded environment.

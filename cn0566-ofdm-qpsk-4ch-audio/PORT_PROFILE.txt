@@ -1,0 +1,21 @@
+Fixed hardware profile
+======================
+
+Pluto TX2A          -> CN0566 TX_IN
+CN0566 TX_OUT_2     -> external Vivaldi X-band antenna
+CN0566 RX1          -> Pluto RX1A
+CN0566 RX2          -> Pluto RX2A
+
+Maximum-throughput default:
+    Pluto complex TX channel [1]  = physical TX2A
+    Pluto complex RX channel [1]  = physical RX2A
+    CN0566 TX switch GPIO 0       = TX_OUT_2
+
+Experimental MRC mode:
+    Pluto complex RX channels [0,1] = RX1A and RX2A
+
+RF frequency plan:
+    Pluto TX/RX LO: 2.200000 GHz
+    CN0566 LO:      12.400000 GHz
+    OFDM DC carrier is nulled
+    Nominal X-band center: 10.200000 GHz

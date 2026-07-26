@@ -1,0 +1,10 @@
+CN0566 single-carrier QPSK GitHub release 1.3.0
+
+1. chmod +x *.sh *.py
+2. ./setup_rpi.sh
+3. ./run_tests.sh
+4. ./run_simulation.sh
+5. Inspect config.env and PORT_PROFILE.txt.
+6. ./run_rf_sanity.sh
+7. ./run_qpsk_no_play.sh
+8. ./run_qpsk_audio.sh

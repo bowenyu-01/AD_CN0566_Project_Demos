@@ -1,0 +1,117 @@
+CN0566 / PLUTO / RASPBERRY PI QPSK-OFDM PHY PERFORMANCE REPORT
+========================================================================
+Run directory: /mnt/data/pattern_perf_test2/20260720_194504_simulate_stable_1m_standard_qpsk_4pattern_v1_smoke
+Mode: simulate
+Profile: profile=stable_1m, Fs=1.000 MSPS, FFT=256, CP=32, data=192, pilots=16, raw data-carrier=1.333 Mbps, rate-1/2 framed=0.643 Mbps
+Pattern set: standard_qpsk_4pattern_v1
+
+Purpose
+  This test uses deterministic PHY patterns, not sample_*.wav files.
+  It measures the four interleaved logical QPSK carrier groups directly.
+
+Four channel test sequences
+  Channel 1: PRBS7: polynomial x^7 + x^6 + 1, all-ones initial state
+  Channel 2: PRBS9: polynomial x^9 + x^5 + 1, all-ones initial state
+  Channel 3: PRBS15: polynomial x^15 + x^14 + 1, all-ones initial state
+  Channel 4: PRBS23: polynomial x^23 + x^18 + 1, all-ones initial state
+
+OFDM profile
+  Sample rate: 1000000 sample/s
+  FFT / cyclic prefix: 256 / 32
+  OFDM symbol samples: 288
+  Total/data OFDM symbols per 20 ms frame: 69/67
+  Data carriers / pilots: 192/16
+  Data carriers per logical channel: 48
+  Subcarrier spacing: 3906.250 Hz
+  Configured occupied bandwidth: 0.843750 MHz
+  Pluto RF bandwidth: 1.250000 MHz
+  IF / nominal X-band center: 2.200000 / 10.200000 GHz
+
+TX waveform
+  Target RMS / peak: 2000.0 / 6000.0
+  Actual RMS / peak: 1999.975 / 6000.000
+  Output PAPR: 9.543 dB
+  Limited sample fraction: 0.005000%
+  TX 99% occupied bandwidth estimate: 0.841309 MHz
+
+Hardware/capture
+  CN0566 URI / Pluto URI: ip:localhost / ip:192.168.2.1
+  TX gain / RX gain / array gain: -40.0 dB / 20.0 dB / 127
+  Beam phase difference: 0.000 degrees
+  Decode mode: rx2
+  PLL lock: simulation
+  Capture elapsed: 0.600 s
+  RX blocks / samples: 6 / 740209
+  RX RMS median / peak max: 31.612 / 109.801
+  RX 99% occupied bandwidth estimate: 0.839355 MHz
+
+Frame acquisition
+  Accepted test frames: 20
+  Rejected pattern candidates: 0
+  Accepted frame rate over capture: 50.000 frame/s
+  Correlation median/min/max: 0.9325/0.9300/0.9347
+  CFO median/std: +120.845/2.155 Hz
+
+Per-channel results
+  Channel 1: PRBS7: polynomial x^7 + x^6 + 1, all-ones initial state
+    Frames / symbols: 20 / 64320
+    Carrier span: -421.875 to +410.156 kHz
+    EVM median (p10/p90): -20.313 dB (-20.564/-20.182)
+    BER mean/max: 0.000000e+00 / 0.000000e+00
+    SER mean: 0.000000e+00
+    Median phase-error standard deviation: 3.863 degrees
+    SNR estimate from EVM: 20.313 dB
+  Channel 2: PRBS9: polynomial x^9 + x^5 + 1, all-ones initial state
+    Frames / symbols: 20 / 64320
+    Carrier span: -417.969 to +414.062 kHz
+    EVM median (p10/p90): -20.421 dB (-20.808/-20.227)
+    BER mean/max: 0.000000e+00 / 0.000000e+00
+    SER mean: 0.000000e+00
+    Median phase-error standard deviation: 3.823 degrees
+    SNR estimate from EVM: 20.421 dB
+  Channel 3: PRBS15: polynomial x^15 + x^14 + 1, all-ones initial state
+    Frames / symbols: 20 / 64320
+    Carrier span: -414.062 to +417.969 kHz
+    EVM median (p10/p90): -20.416 dB (-20.663/-20.104)
+    BER mean/max: 0.000000e+00 / 0.000000e+00
+    SER mean: 0.000000e+00
+    Median phase-error standard deviation: 3.847 degrees
+    SNR estimate from EVM: 20.416 dB
+  Channel 4: PRBS23: polynomial x^23 + x^18 + 1, all-ones initial state
+    Frames / symbols: 20 / 64320
+    Carrier span: -410.156 to +421.875 kHz
+    EVM median (p10/p90): -20.438 dB (-20.795/-20.124)
+    BER mean/max: 0.000000e+00 / 0.000000e+00
+    SER mean: 0.000000e+00
+    Median phase-error standard deviation: 3.816 degrees
+    SNR estimate from EVM: 20.438 dB
+
+Generated plots
+  plots/ofdm_waveform_original_vs_captured.png
+  plots/ofdm_power_spectral_density.png
+  plots/channel_1_constellation.png
+  plots/channel_1_eye.png
+  plots/channel_1_waveform_original_vs_received.png
+  plots/channel_1_power_spectral_density.png
+  plots/channel_2_constellation.png
+  plots/channel_2_eye.png
+  plots/channel_2_waveform_original_vs_received.png
+  plots/channel_2_power_spectral_density.png
+  plots/channel_3_constellation.png
+  plots/channel_3_eye.png
+  plots/channel_3_waveform_original_vs_received.png
+  plots/channel_3_power_spectral_density.png
+  plots/channel_4_constellation.png
+  plots/channel_4_eye.png
+  plots/channel_4_waveform_original_vs_received.png
+  plots/channel_4_power_spectral_density.png
+  plots/evm_stability.png
+
+Interpretation and limitations
+  - BER and SER are measured against deterministic known QPSK patterns.
+  - EVM is calculated after training-based equalization and pilot phase correction.
+  - SNR from EVM is an approximation and assumes residual error behaves like uncorrelated noise.
+  - PSD values are relative, not calibrated RF power measurements.
+  - Waveform comparisons are normalized and complex-gain aligned for shape comparison.
+  - The eye plots are derived QPSK decision eyes. OFDM does not have the same raw pulse-shaped eye as single-carrier QPSK.
+  - This PHY test does not exercise audio coding, packet FEC, jitter buffers, or ALSA.

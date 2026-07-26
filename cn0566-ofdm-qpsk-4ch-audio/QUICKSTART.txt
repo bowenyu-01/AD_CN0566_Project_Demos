@@ -1,0 +1,15 @@
+CN0566 four-channel QPSK-OFDM GitHub release 2.3.1
+
+1. chmod +x *.sh *.py
+2. ./setup_rpi.sh
+3. ./run_tests.sh
+4. ./run_simulation.sh
+5. ./run_realtime_benchmark.sh
+6. Inspect config.env and physical port map.
+7. ./diagnose_iio.sh
+8. ./run_rf_sanity.sh
+9. ./run_ofdm_probe.sh
+10. ./run_ofdm_no_play.sh
+11. ./run_ofdm_audio.sh
+
+Do not proceed to RF if simulation or realtime benchmark fails.

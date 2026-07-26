@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible software or documentation problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private credentials, calibration data, or unauthorized RF details.
+  - type: input
+    id: version
+    attributes:
+      label: Release/version
+      placeholder: Output of cat VERSION.txt
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Hardware and software environment
+      description: Raspberry Pi model/OS, Pluto revision/firmware, pyadi-iio version, receive mode.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: The issue can be reproduced without unauthorized RF transmission.
+          required: true

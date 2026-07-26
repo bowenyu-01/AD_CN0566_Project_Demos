@@ -1,0 +1,20 @@
+[project]
+name = "cn0566-ofdm-qpsk-4ch-audio"
+version = "2.3.1"
+description = "Four-channel QPSK-OFDM audio link for CN0566, PlutoSDR and Raspberry Pi"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Bowen Yu" }]
+dependencies = [
+  "numpy>=1.19,<2.0",
+  "scipy>=1.6,<1.14",
+  "matplotlib>=3.3,<3.9",
+  "pyadi-iio>=0.0.21",
+  "pylibiio>=0.25",
+]
+
+[project.urls]
+Documentation = "https://github.com/YOUR_ACCOUNT/cn0566-ofdm-qpsk-4ch-audio"
+Source = "https://github.com/YOUR_ACCOUNT/cn0566-ofdm-qpsk-4ch-audio"
+Issues = "https://github.com/YOUR_ACCOUNT/cn0566-ofdm-qpsk-4ch-audio/issues"

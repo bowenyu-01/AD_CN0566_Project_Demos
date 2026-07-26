@@ -1,0 +1,16 @@
+CN0566 four-channel QPSK-OFDM performance report
+Profile: profile=stable_1m, Fs=1.000 MSPS, FFT=256, CP=32, data=192, pilots=16, raw data-carrier=1.333 Mbps, rate-1/2 framed=0.643 Mbps
+Frames captured: 20
+
+Plot interpretation:
+- Constellation: measured equalized QPSK data-carrier symbols for that logical channel.
+- Eye: analysis-only equivalent decision eye derived from the measured equalized symbols.
+- Waveform: channel contribution reconstructed by retaining only that channel's interleaved carriers.
+- Spectrum: PSD of that reconstructed channel contribution.
+
+Channel 1: valid=20, symbols=64320, median EVM=-21.93 dB, median raw PRBS BER=0.000e+00
+Channel 2: valid=20, symbols=64320, median EVM=-21.90 dB, median raw PRBS BER=0.000e+00
+Channel 3: valid=20, symbols=64320, median EVM=-21.97 dB, median raw PRBS BER=0.000e+00
+Channel 4: valid=20, symbols=64320, median EVM=-21.98 dB, median raw PRBS BER=0.000e+00
+
+Receiver frames decoded: 20

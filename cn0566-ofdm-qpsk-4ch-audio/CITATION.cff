@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the repository and release."
+title: "CN0566 / Pluto Four-Channel QPSK-OFDM Audio"
+type: software
+authors:
+  - family-names: Yu
+    given-names: Bowen
+version: 2.3.1
+date-released: 2026-07-26
+license: MIT
+abstract: >-
+  Raspberry Pi reference implementation of a four-stream QPSK-OFDM audio link
+  using ADALM-Pluto and the CN0566/ADALM-PHASER X-band platform.
+keywords:
+  - OFDM
+  - QPSK
+  - OFDMA
+  - software-defined radio
+  - CN0566
+  - ADALM-Pluto
+  - Raspberry Pi

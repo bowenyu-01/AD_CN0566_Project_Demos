@@ -1,0 +1,15 @@
+{
+  "mode": "simulate",
+  "frames_analyzed": 10,
+  "mean_correlation": 0.6373537609845391,
+  "mean_cfo_hz": 7.349182935149815,
+  "mean_evm_db": -7.63549189076913,
+  "mean_ber": 0.016336633663366334,
+  "mean_ser": 0.03267326732673267,
+  "sample_rate": 1000000,
+  "symbol_rate": 250000,
+  "digital_offset_hz": 187500,
+  "nominal_xband_rf_hz": 10199812500,
+  "packet_bytes": 176,
+  "metadata": {}
+}
